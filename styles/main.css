@@ -367,31 +367,31 @@ button:disabled {
 }
 
 #inputData{
-  background: url("../Images/Input.png") #222241b3;
+  background: url("../images/Input.png") #222241b3;
   /* background-size: contain; */
 }
 
 #menuTakeImage{
-  background: url("../Images/Camera.png") #222241b3;
+  background: url("../images/Camera.png") #222241b3;
   /* background-size: contain; */
 }
 
 #filterData{
-  background: url("../Images/Filter.png") #222241b3;
+  background: url("../images/Filter.png") #222241b3;
   /* background-size: contain; */
 }
 
 #showUtilities{
-  background: url("../Images/Show.png") #222241b3;
+  background: url("../images/Show.png") #222241b3;
   /* background-size: contain; */
 }
 
 #addUtility{
-  background: url("../Images/AddUtility.png") #222241b3;
+  background: url("../images/AddUtility.png") #222241b3;
  }
  
  #settings{
-   background: url("../Images/Settings.png") #222241b3;
+   background: url("../images/Settings.png") #222241b3;
  }
 
 #dateFilter{
