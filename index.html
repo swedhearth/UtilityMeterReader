@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+  <title>Meter Reader Display</title>
+  <meta name="mobile-web-app-capable" content="yes">
+  <link rel="icon" sizes="192x192" href="images/icon.png">
+  <link rel="stylesheet" href="styles/main.css">
+<!--   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script>
+    if (!window.jQuery) document.write('<script src="scripts/jquery-3.2.1.js"><\/script>');
+  </script>
+  <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js"></script>
+    <script>
+    if (!window.jQuery.ui) document.write('<script src="scripts/jquery-ui.min.js"><\/script>');
+  </script> -->
+  
+  <script src="scripts/jquery-3.2.1.js"></script>
+  <script src="scripts/jquery-ui.min.js"></script>
+  <!-- <script src="scripts/jquery-ui.min.js"></script> -->
+  <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.touchswipe/1.6.18/jquery.touchSwipe.min.js"></script> -->
+  <script src="scripts/TouchSwipe.js"></script>
+  <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.20.1/moment-with-locales.min.js"></script> -->
+  <script src="scripts/moment-with-locales.js"></script>
+  <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/1.0.2/Chart.min.js"></script> -->
+  <script src="scripts/Chart.min.js"></script>
+ <!--  <script src="scripts/jscolor.min.js"></script> -->
+  <script src="scripts/main.js"></script>
+</head>
+
+<body>
+
+  <section id="mainSection">
+    <section id="chartSection" style="overflow: scroll; top:15vmin; position: relative; width:calc(100vw + 21px);">
+      <section id="chartWrapper" style="position: relative; height: calc(100vh - 15vmin); width: 100vw;"> </section>
+    </section>
+    <section id="readingsSection" style="display: none">
+		<div id="readingTitleWrap">
+			<div id="readingTitle">Gas</div>
+		</div>
+      <div id="readingWrap">
+        <table class="rTheadTable">
+            <tr>
+              <th>Date</th>
+              <th>Reading</th>
+              <th>Difference</th>
+            </tr>
+            <tr><th colspan="3" id="divRow"></th></tr>
+        </table>
+  
+        <table id="rTbody" class="rTtbodyTable"></table>
+      </div>
+    </section>
+    
+    <section id="masksSection" style="display:none;">
+		<img id="maskTitle">
+		<div id="maskSlider"> </div>
+    </section>
+
+    <section id="imageModeless" style="display:none;" >
+      <img id="bigImage">
+    </section>
+    
+    <!-- <section id="inputSection">  -->
+      <section  id="inputLabel" class="subSectionLabels" style="display:none;" >
+        
+        <img id="utilTakeImage" class="cameraImages">
+        <div id="utilName" class="utilName"></div>
+        <img src="images/Yes.png" id="inputYes" class="YesImages">
+        <img src="images/No.png" id="inputNo" class="NoImages">
+        <!-- <input  type="number" id="utilReadValue" class="confmHide">  min="8000" max="9999" -->
+        
+        <input type="date" id="utilReadDate">
+        <div class="readerScrollWrap"></div>
+        
+        <input type="file" id="readImgInp" style="display:none;" />
+      </section>
+    <!-- </section>       -->
+
+    <section id="menuSection">
+      <section id="menuButtonSubsection">
+        <div id="menuImg">
+          <div class="btnDv"></div>
+          <div class="btnDv"></div>
+          <div class="btnDv"></div>
+        </div>
+      </section>
+	  
+      <section id="optWrap">
+        <section id="menuOptionsSubsection">
+          <button id="inputData" class="menuButtons"></button>
+          <button id="showUtilities" class="menuButtons"></button>
+          <button id="menuTakeImage" class="menuButtons"></button>         
+          <button id="filterData" class="menuButtons"></button>
+          <button id="addUtility" class="menuButtons"></button>
+          <button id="settings" class="menuButtons"></button>
+        </section>
+      </section>
+    </section>
+	
+    <section id="optionSection">
+      <img src="images/ResetFilter.png" class="optionButtons resetDateFilter" style="display: none;">
+      <img src="images/zoomOut.png" id="zoomOut" class="optionButtons">
+      <img src="images/zoomCancel.png" id="zoomCancel" class="optionButtons">
+      <img src="images/zoomIn.png" id="zoomIn" class="optionButtons">
+      <img src="images/moveLeft.png" id="moveLeft" class="optionButtons">
+      <img src="images/showTable.png" id="showTable" class="optionButtons tableChartToggle">
+      <img src="images/showChart.png" id="showChart" class="optionButtons tableChartToggle" style="display: none;">
+      <img src="images/moveRight.png" id="moveRight" class="optionButtons">
+      <img src="images/moreOptions.png" id="moreOptions" class="optionButtons">
+    </section>
+	
+    <section id="dateFilter" style="display: none;">
+      <label>Filter by Date:</label>
+      <input class="filterDates" id="chartStartDate" type="month">
+      <br>
+      <label for="chartStartDate">Start Date</label>
+      <br>
+      <input class="filterDates" id="chartEndDate" type="month">
+      <br>
+      <label for="chartEndDate">End Date</label>
+      <br><br><br>
+      <img src="images/ResetFilter.png" class="optionButtons resetDateFilter">
+    </section>
+	
+  </section>
+<!--   <div style="position:absolute; left:calc(50vw - 1px); width:1px; height: 100vh; background:white;"> <div id="testTabel" style="position: absolute; bottom: 1vh; left: 1vw; height: 10vh; width: 30vw; background: yellow;"> kjgdwd</div></div> -->
+</body>
+</html>

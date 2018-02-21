@@ -1,0 +1,41 @@
+//Comments Section:
+
+//ZOOM IN FUNCTION:
+console.log("clientWidth:" + clientWidth + "px");
+console.log("clientWidth/100:" + clientWidth/100 + "px");
+console.log("10 x vw = " + (10*w) + "px");
+console.log("cWidth before: " + cWidth * w + "px")
+				console.log("Css width = " + $('#chartWrapper').width());
+                console.log("cWidth after: " + cWidth * w + "px")
+                
+                /* 1408 (128px is the whole scroll for the first zoom - 0 to 128 because + 10 vw and 1vh = 12.8px)
+1408 / 2 = 704
+middle of the screen when scroll set to 0 is 1408 - 128 (whole scrool however for some reason is 4 px less so 124?) + (acctual left scroll - 0 ) - 1280/2 (100 vw / 2)
+
+1280 - 640 = 640 and it cant be less   // test 640 + 64(actual zoom) = 704 x=70400/1408 = 50% then x=50*128/100, so x=64
+1408 - 100%
+640 - x%
+1408x = 64000
+x= 64000/1408
+x=45.454545454%
+
+128 - 100%
+x - 45.45%
+100x = 45.45 * 128
+x = 45.45 * 128 / 100
+
+general middle of the screen:
+
+current width of screen - (current width of screen - 100vw(1280px))+ current scrollLeft - 100wv /2 */
+
+//x=((cWidth * w - ((cWidth * w ) - clientWidth)+ $('#chartSection').scrollLeft() - (clientWidth/2)) * 100 / (cWidth * w ) )  * 128 / 100
+ 
+/* var newTry = ((cWidth * w - ((cWidth * w ) - clientWidth) + $('#chartSection').scrollLeft() - (clientWidth/2)) * 100 / (cWidth * w ) )  * clientWidth / 10 / 100; */
+
+/* var newTry = ((cWidthTwo * w - ((cWidthTwo * w ) - clientWidth) + $('#chartSection').scrollLeft() - (clientWidth/2)) * 100 / (cWidthTwo * w ) )  * clientWidth / 10 / 100; */
+
+console.log("scrollBy (newTry): +" + newTry + "px")
+                 console.log(" before / scL: " + scL); 
+                console.log(" before / scL + newTry : " + (scL + newTry) + " and add 4 for some reason");
+                              scAfter = $('#chartSection').scrollLeft();
+                console.log(" after / scL: " + scAfter);

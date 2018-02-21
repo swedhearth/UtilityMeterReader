@@ -1,0 +1,14 @@
+{
+    "Gas":{
+        "utilImg":"images/Gas.png",
+        "borderCol": "255, 100, 0"
+    },
+    "Electricity":{
+        "utilImg":"images/Electricity.png",
+        "borderCol": "0, 255, 155"
+    },
+    "Water":{
+        "utilImg":"images/defaultUtility.png",
+        "borderCol": "0, 100, 155"
+    }
+}
